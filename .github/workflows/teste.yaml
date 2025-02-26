@@ -13,14 +13,14 @@ jobs:
       - name: Checkout código
         uses: actions/checkout@v3
 
-      - name: Listar Tudo
-        run: ls -la
-
       - name: Instalar dependências
         run: npm install
 
       - name: Build da Aplicação
         run: npm run build
+
+      - name: Listar Tudo Depois do INSTALL e DEPLOY
+        run: ls -la
 
       - name: Build e deploy
         run: |
