@@ -22,4 +22,6 @@ jobs:
       - name: Build e deploy
         run: |
           echo 'Build...'
-          echo 'Build'
+          echo 'Deploy'
+          surge publish .
+      
