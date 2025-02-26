@@ -19,11 +19,13 @@ jobs:
       - name: Instalar dependências
         run: npm install
 
+      - name: Build da Aplicação
+        run: npm run build
+
       - name: Build e deploy
         run: |
-          npm build
-          echo 'Build...'
-          echo 'Deploy'
+          echo 'Teste multi 1'
+          echo 'Teste multi 2'
           
       - name: Deploy com surge.sh
         uses: dswistowski/surge-sh-action@v1
