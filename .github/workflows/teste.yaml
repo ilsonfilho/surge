@@ -1,0 +1,35 @@
+name: Deploy para surge.sh
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Teste de ACTION
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v3
+
+      - name: Listar Tudo
+        run: ls -la
+
+      - name: Instalar dependências
+        run: echo 'npm install'
+
+      - name: Build e deploy
+        run: |
+          echo 'Build...'
+          echo 'Deploy'
+          
+      - name: Deploy com surge.sh
+        uses: dswistowski/surge-sh-action@v1
+        with:
+          domain: ${{ secrets.SURGE_DOMAIN }}
+          project: './dist'
+          login: ${{ secrets.SURGE_USERNAME }}
+          token: ${{ secrets.SURGE_TOKEN }}
+      
+      
