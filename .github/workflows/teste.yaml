@@ -27,6 +27,7 @@ jobs:
           echo 'Teste multi 1'
           echo 'Teste multi 2'
           
+          
       - name: Deploy com surge.sh
         uses: dswistowski/surge-sh-action@v1
         with:
