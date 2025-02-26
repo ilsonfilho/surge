@@ -1,5 +1,5 @@
 :root {
-  --hover: #0f0;
+  --hover: rgb(255, 0, 119);
   --cor: var(--hover);
 }
 
