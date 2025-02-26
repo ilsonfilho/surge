@@ -1,0 +1,25 @@
+name: Deploy para surge.sh
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    name: Teste de ACTION
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v3
+
+      - name: Listar Tudo
+        run: ls -la
+
+      - name: Instalar dependências
+        run: echo 'npm install'
+
+      - name: Build e deploy
+        run: |
+          echo 'Build...'
+          echo 'Build'
