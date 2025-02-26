@@ -1,6 +1,6 @@
 :root {
-  --cor: #ccc;
   --hover: #f00;
+  --cor: var(--hover);
 }
 
 * {
