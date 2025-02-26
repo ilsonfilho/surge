@@ -24,7 +24,12 @@ jobs:
           echo 'Build...'
           echo 'Deploy'
           
-          npm install surge
-          surge publish .
+      - name: Deploy com surge.sh
+        uses: surge/surge-action@v1
+        
+        with:
+          user: ${{ secrets.SURGE_USERNAME }}
+          token: ${{ secrets.SURGE_TOKEN }}
+          domain: ${{ secrets.SURGE_DOMAIN }}
       
       
