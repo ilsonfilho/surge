@@ -25,11 +25,11 @@ jobs:
           echo 'Deploy'
           
       - name: Deploy com surge.sh
-        uses: surge/surge-action@v1
-        
+        uses: dswistowski/surge-sh-action@v1
         with:
-          user: ${{ secrets.SURGE_USERNAME }}
-          token: ${{ secrets.SURGE_TOKEN }}
           domain: ${{ secrets.SURGE_DOMAIN }}
+          project: '.'
+          login: ${{ secrets.SURGE_USERNAME }}
+          token: ${{ secrets.SURGE_TOKEN }}
       
       
