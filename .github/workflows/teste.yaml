@@ -17,10 +17,11 @@ jobs:
         run: ls -la
 
       - name: Instalar dependências
-        run: echo 'npm install'
+        run: npm install
 
       - name: Build e deploy
         run: |
+          npm build
           echo 'Build...'
           echo 'Deploy'
           
